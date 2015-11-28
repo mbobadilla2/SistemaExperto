@@ -1,7 +1,18 @@
+%Esta línea es para abrir en archivo en OS X.
+%consult('/Users/fernando2/Github/SistemaExperto/sistemaexpertocomputadoras.pl').
+
+/*
+	Sistema experto para escoger una computadora basado en las necesidades del usuario.
+
+	Bobadilla Contreras Miguel Fernando.
+	Ordoñez Ruiz Edgar.
+	Pérez Rodríguez José Rubén.
+*/
+
 %Estructura: marca, modelo, tipo, uso, precio, cores_CPU, RAM, SO, HD, USB 2.0, USB 3.0.
 
 %Laptop
-
+/*
 computadora(lenovo, g40-30, laptop, oficina, 7000, 2, 4, windows_8_1, 500gb, 2, 1). %lap01
 computadora(ghia, qcn3540, laptop, oficina, 6060, 4, 4, windows_8_1, 500gb, 2, 1). %lap02
 computadora(acer, tmb115, laptop, oficina, 4860, 2, 4, linux, 320gb, 2, 1). %lap03
@@ -28,4 +39,55 @@ computadora(lenovo, m53p, escritorio, disenio, 12470, 8, 8, windows_7, 1tb, 2, 6
 computadora(apple, imac, escritorio, disenio, 48000, 4, 8, OS_X, 2tb, 0, 4). %esc09
 computadora(ghia, ci7_4790, escritorio, gamer, 12200, 8, 8, windows_8_1, 2tb, 2, 8). %esc10
 computadora(hp, elite_one_800, escritorio, gamer, 24900, 8, 8, windows_8_1, 1tb, 4, 4). %esc11
+*/
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lo mismo, pero con los llamados a las reglas.
+
+%Predicado final que imprime el resultado.
+comprar:- computadora(Modelo),
+	write('La computadora que deberia elegir es: '),
+	write(Modelo),
+	nl,
+	limpiaBC.
+
+%Hipótesis.
+%computadora(acer, tmb115, laptop, oficina, 4860, 2, ram_4gb, linux, hdd_320gb, 2, 1):- acerTmb115, !.
+%computadora(apple, macbookpro, laptop, disenio, 52000, 8, ram_16gb, osx, sdd_128gb, 0, 2):- macbookpro, !.
+computadora(macbookpro):- macbookpro, !.
+computadora(desconocido).
+
+%Reglas que identifican a cada computadora.
+macbookpro:- laptop,
+			otroSo,
+			verifica(debe_tener_mas_de_4_gb_de_ram),
+			verifica(debe_tener_ssd),
+			verifica(sobrepasaria_los_20000_pesos).
+
+%Reglas de clasificación.
+laptop:- verifica(debe_ser_portatil).
+otroSo:- verifica(puede_tener_un_sistema_operativo_distinto_a_windows).
+
+
+%Preguntas al usuario.
+pregunta(Caracteristica):-
+	write('La computadora que busca '),
+	write(Caracteristica),
+	write('? '),
+	read(Respuesta),
+	nl,
+	( (Respuesta == si ; Respuesta == s)
+		->
+			assert(si(Caracteristica));
+			assert(no(Caracteristica)), fail).
+
+:- dynamic si/1, no/1.
+
+%Verificar si algo es cierto.
+verifica(R):-
+	(si(R) -> true; (no(R) -> fail; pregunta(R))).
+
+
+%Limpiar la base de conocimientos.
+limpiaBC:- retract(si(_)), fail.
+limpiaBC:- retract(no(_)), fail.
+limpiaBC.
