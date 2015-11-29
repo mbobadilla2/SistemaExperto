@@ -59,21 +59,22 @@ comprar:-
 %Hipótesis.
 %Estructura: marca, modelo, tipo, uso, precio, pulgadas, cores_CPU, RAM, SO, HD, USB 2.0, USB 3.0.
 
-%El ! al final indice un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
+%El ! al final indica un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
 
 %Laptop
-computadora('lenovo' , 'g40-30' , 'laptop' , 'oficina' , '7000' ,'11"', '2' , '4GB' , 'windows_8_1' , '500gb' , '2' , '1'):- lenovo_g40-30, !.
-computadora('ghia' , 'qcn3540' , 'laptop' , 'oficina' , '6060' ,'11.2"' , '4' , '4GB' , 'windows_8_1' , '500gb' , '2' , '1'):- ghia_qcn3540, !.
-computadora('dell' , 'inspiron_14_3442' , 'laptop' , 'multimedia' , '8550' ,'14"' , '4' , '4GB' , 'windows_8_1' , '1tb' , '2' , '1'):- dell_inspiron_14, !.
-computadora('hp' , '14-af16la' , 'laptop' , 'multimedia' , '9000' ,'14"', '4' , '6GB' , 'windows_10' , '1tb' , '2' , '1'):- hp_14-af16la, !.
-computadora('asus' , 'f455la' , 'laptop' , 'multimedia' , '10970' ,'15"', '4' , '4GB' , 'windows_8_1' , '1tb' , '1' , '2'):- asus_f455la, !.
-computadora('hp' , 'elitebook_840' , 'laptop' , 'disenio' , '30100','11.5' , '8' , '16GB' , 'windows_8_1' , '1tb' , '2' , '1'):- hp_elitebook, !.
-computadora('toshiba' , 'l55-b5179sm' , 'laptop' , 'disenio' , '18920' ,'12"' , '4' , '8GB' , 'windows_8_1' , '1tb' , '2' ,'1'):- toshiba_l55, !.
-computadora('lenovo' , 'y50-70' , 'laptop' , 'gamer' , '18000' ,'12"' , '8' , '8GB' , 'windows_8_1' , '1tb' , '2' , '1' ):- lenovo_y50-70, !.                    
-computadora('dell' , 'alienware_15_r3' , 'laptop' , 'gamer' , '33100' ,'15"' , '8' , '8GB' , 'windows_10' , '1tb', '0', '3'):- dell_ alienware_15_r2, !.
-computadora('HP',	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hpenvy14, !.
-computadora('Acer', 'TMB115',			'Laptop', 'Oficina', 	'4860',	'11.6"',	'2', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acertmb115, !.
-computadora('Apple','MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'8', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
+computadora('Apple', 	'MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'8', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
+computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30100',	'11.5"','8', '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1'):- hp_elitebook, !.
+computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30100',	'11.5"','8', '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1'):- hp_elitebook, !.
+computadora('Lenovo',   'Y50-70', 			'Laptop', 'Gamer',		'18000',	'12"',	'8', '8GB',		'Windows 8.1',	'1TB (HDD)', 	'2', 	'1'):- lenovo_y50_70, !.                    
+computadora('Dell',		'Alienware 15 r3',	'Laptop', 'Gamer',		'33100',	'15"',	'8', '8GB',		'Windows 10',	'1TB (HDD)', 	'0', 	'3'):- dell_alienware_15_r2, !.
+computadora('Toshiba',  'L55-b5179sm', 		'Laptop', 'Disenio', 	'18920',	'12"', 	'4', '8GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2',	'1'):- toshiba_l55, !.
+computadora('HP', 		'14-af16la', 		'Laptop', 'Multimedia', '9000',		'14"', 	'4', '6GB', 	'Windows 10', 	'1TB (HDD)', 	'2', 	'1'):- hp_14_af16la, !.
+computadora('HP',	 	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hp_envy14, !.
+computadora('GHIA', 	'Qcn3540', 			'Laptop', 'Oficina', 	'6060',		'11.2"','4', '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1'):- ghia_qcn3540, !.
+computadora('Dell', 	'Inspiron 14-3442', 'Laptop', 'Multimedia', '8550',		'14"', 	'4', '4GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1'):- dell_inspiron_14, !.
+computadora('Asus',	 	'F455la', 			'Laptop', 'Multimedia', '10970',	'15"', 	'4', '4GB',		'Windows 8.1', 	'1TB (HDD)', 	'1', 	'2'):- asus_f455la, !.
+computadora('Lenovo', 	'G40-30', 			'Laptop', 'Oficina', 	'7000',		'11"', 	'2', '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1'):- lenovo_g40_30, !.
+computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4860',		'11.6"','2', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acer_tmb115, !.
 %computadora('No se encontro un producto que cubra sus necesidades', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A').
 
 %Escritorio
@@ -92,75 +93,115 @@ computadora(hp, elite_one_800, escritorio, gamer, 24900, 8, 8, windows_8_1, 1tb,
 
 %Reglas que identifican a cada computadora (Se deben poner cosas que diferencíen a un modelo del resto).
 %Las que no llevan paréntesis son reglas de clasificación.
-hpenvy14:- laptop,
+
+lenovo_g40_30:- laptop,
+			cores2,
+			ram4,
+			pantallaP,
+            muchoAlmacenamiento.
+
+
+ghia_qcn3540:- laptop,	
+			cores4,
+			ram4,
+			pantallaP,
+            muchoAlmacenamiento.
+
+
+dell_inspiron_14:- laptop,
+			cores4,
+			ram4,
+            muchoAlmacenamiento.
+
+
+hp_14_af16la:- laptop, 
+			cores4,
+			ram6,
+            muchoAlmacenamiento.
+
+
+asus_f455la:- laptop,
+			cores4,
+			ram4,
+			pantallaP,
+            verifica('deber tener 2 puertos USB 3.0'),
+            noPortable.
+
+
+hp_elitebook:- laptop,
+			cores8,
+			ram16,
+			pantallaP,
+            windows.
+
+
+toshiba_l55:- laptop,
+			cores4,
+			ram8,
+			pantallaP,
+            verifica('deber ser uso disenio').
+
+
+lenovo_y50_70:- laptop,
+			cores8,
+			ram8,
+			pantallaP,
+            gamer.
+
+dell_alienware_15_r2:- laptop,
+			ram8,
+			verifica('debe tener solo puertos USB3.0'),
+			gamer,
+			noPortable,
+			muyCara.
+
+
+hp_envy14:- laptop,
 			windows,
 			verifica('la usara para ver peliculas, videos y escuchar musica'),
 			muchoAlmacenamiento,
-			pantalla,
+			pantallaG,
 			verifica('sobrepasaria los $10,000').
 
-acertmb115:- laptop,
-			economico,
-			muchoAlmacenamiento.
+
+acer_tmb115:- laptop,
+			linux,
+			pantallaP,
+			economico.
+
 
 macbookpro:- laptop,
-			verifica('debe tener mas de 4GB de RAM'),
-			verifica('debe tener SSD en lugar de disco duro'),
-			verifica('sobrepasaria los $20,000').
-
-dell_ alienware_15_r2:- laptop,
-            verifica('debe tener 8 de RAM'),
-			verifica('debe tener solo puertos USB3_0'),
-			verifica('sobrepasaria los $30,000').
-
-lenovo_y50-70:- laptop,
-            verifica('debe tener 8 Cores_CPU'),
-            verifica('debe tener 8 de RAM'),
-            verifica('deber ser Uso gamer').	
-
-lenovo_g40-30:- laptop,
-             verifica('debe tener 2 Cores_CPU'),
-            verifica('debe tener 4GB de RAM'),
-            verifica('deber tener 500GB de HD').
-
- ghia_qcn3540:- laptop,	
-             verifica('debe tener 4 Cores_CPU'),
-            verifica('debe tener 4 de RAM'),
-            verifica('deber tener 500GB de HD'). 
-
-dell_inspiron_14:- laptop,
-             verifica('debe tener 4 Cores_CPU'),
-            verifica('debe tener 4 de RAM'),
-            verifica('deber tener 1tb de HD').    
-hp_14-af16la:- laptop, 
-             verifica('debe tener 4 Cores_CPU'),
-            verifica('debe tener 6 de RAM'),
-            verifica('deber tener 1tb de HD').
-asus_f455la:- laptop,
-             verifica('debe tener 4 Cores_CPU'),
-            verifica('debe tener 4 de RAM'),
-            verifica('deber tener 2 puertos USB3_0').
-hp_elitebook:- laptop,
-            verifica('debe tener 8 Cores_CPU'),
-            verifica('debe tener 16 de RAM'),
-            windows.
-		
-toshiba_l55:- laptop,
-            verifica('debe tener 4 Cores_CPU'),
-            verifica('debe tener 8 de RAM'),
-            verifica('deber ser Uso disenio').
-
+			osx,
+			ram16,
+			cores8,
+			ssd,
+			pocoAlmacenamiento,
+			muyCara.
 			
 %Reglas de clasificación (son como características genéricas que pueden tener varios modelos).
 %Se puede poner varias veces la misma regla con distinto parámetro en verifica().
 %Se puede poner más de una condición en cada regla, separándolas por comas.
-laptop:- verifica('debe ser portatil').
-otroSo:- verifica('puede tener un sistema operativo distinto a Windows').
-economico:- verifica('debe ser un equipo economico ($5,000 o menos)').
-muchoAlmacenamiento:- verifica('debe tener gran cantidad de almacenamiento').
-pantalla :- verifica('debe tener una pantalla grande').
-windows:- verifica('debe tener Windows').
-
+laptop:- 				verifica('debe ser una laptop').
+economico:- 			verifica('debe ser un equipo economico ($5,000 o menos)').
+muchoAlmacenamiento:- 	verifica('debe tener gran cantidad de almacenamiento (500GB o mas)').
+pocoAlmacenamiento:-	verifica('puede tener una unidad de almacenamiento de menos de 256GB').
+pantallaG:- 			verifica('debe tener una pantalla grande').
+pantallaP:-				verifica('debe tener una pantalla pequenia (12" o menos)').
+windows:- 				verifica('debe tener Windows').
+osx:-					verifica('debe tener OS X').
+linux:-					verifica('debe tener Linux').
+muyCara:-				verifica('costaria mas de $27000 pesos').
+gamer:-					verifica('la usara mas bien para jugar videojuegos').
+noPortable:-			verifica('puede perder portabilidad a cambio de potencia').
+ram4:-					verifica('debe tener al menos 4GB de RAM').
+ram6:-					verifica('debe tener al menos 6GB de RAM').
+ram8:-					verifica('debe tener al menos 8GB de RAM').
+ram16:-					verifica('debe tener al menos 16GB de RAM').
+precioMedio:-			verifica('debe costar entre $15,000 y $20,000').
+cores2:-				verifica('debe tener al menos 2 cores de CPU').
+cores4:-				verifica('debe tener al menos 4 cores de CPU').
+cores8:-				verifica('debe tener al menos 8 cores de CPU').
+ssd:-					verifica('debe tener SSD en lugar de disco duro').
 
 %Preguntas al usuario.
 pregunta(Caracteristica):-
