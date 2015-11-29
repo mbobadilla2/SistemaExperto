@@ -63,10 +63,10 @@ comprar:-
 
 %Laptop
 computadora('lenovo' , 'g40-30' , 'laptop' , 'oficina' , '7000' ,'11"', '2' , '4GB' , 'windows_8_1' , '500gb' , '2' , '1'):- lenovo_g40-30, !.
-computadora('ghia' , 'qcn3540' , 'laptop' , 'oficina' , '6060' ,'11.2"' , '4' , '4' , 'windows_8_1' , '500gb' , '2' , '1'):- ghia_qcn3540, !.
+computadora('ghia' , 'qcn3540' , 'laptop' , 'oficina' , '6060' ,'11.2"' , '4' , '4GB' , 'windows_8_1' , '500gb' , '2' , '1'):- ghia_qcn3540, !.
 computadora('dell' , 'inspiron_14_3442' , 'laptop' , 'multimedia' , '8550' ,'14"' , '4' , '4GB' , 'windows_8_1' , '1tb' , '2' , '1'):- dell_inspiron_14, !.
 computadora('hp' , '14-af16la' , 'laptop' , 'multimedia' , '9000' ,'14"', '4' , '6GB' , 'windows_10' , '1tb' , '2' , '1'):- hp_14-af16la, !.
-computadora('asus' , 'f455la' , 'laptop' , 'multimedia' , '10970' ,'15"', '4' , '4GB' , 'windows_8_1' , '1tb' , '2' , '1'):- asus_f455la, !.
+computadora('asus' , 'f455la' , 'laptop' , 'multimedia' , '10970' ,'15"', '4' , '4GB' , 'windows_8_1' , '1tb' , '1' , '2'):- asus_f455la, !.
 computadora('hp' , 'elitebook_840' , 'laptop' , 'disenio' , '30100','11.5' , '8' , '16GB' , 'windows_8_1' , '1tb' , '2' , '1'):- hp_elitebook, !.
 computadora('toshiba' , 'l55-b5179sm' , 'laptop' , 'disenio' , '18920' ,'12"' , '4' , '8GB' , 'windows_8_1' , '1tb' , '2' ,'1'):- toshiba_l55, !.
 computadora('lenovo' , 'y50-70' , 'laptop' , 'gamer' , '18000' ,'12"' , '8' , '8GB' , 'windows_8_1' , '1tb' , '2' , '1' ):- lenovo_y50-70, !.                    
@@ -116,8 +116,40 @@ dell_ alienware_15_r2:- laptop,
 lenovo_y50-70:- laptop,
             verifica('debe tener 8 Cores_CPU'),
             verifica('debe tener 8 de RAM'),
-            verifica('deber ser Uso gamer').			
-			
+            verifica('deber ser Uso gamer').	
+
+lenovo_g40-30:- laptop,
+             verifica('debe tener 2 Cores_CPU'),
+            verifica('debe tener 4GB de RAM'),
+            verifica('deber tener 500GB de HD').
+
+ ghia_qcn3540:- laptop,	
+             verifica('debe tener 4 Cores_CPU'),
+            verifica('debe tener 4 de RAM'),
+            verifica('deber tener 500GB de HD'). 
+
+dell_inspiron_14:- laptop,
+             verifica('debe tener 4 Cores_CPU'),
+            verifica('debe tener 4 de RAM'),
+            verifica('deber tener 1tb de HD').    
+hp_14-af16la:- laptop, 
+             verifica('debe tener 4 Cores_CPU'),
+            verifica('debe tener 6 de RAM'),
+            verifica('deber tener 1tb de HD').
+asus_f455la:- laptop,
+             verifica('debe tener 4 Cores_CPU'),
+            verifica('debe tener 4 de RAM'),
+            verifica('deber tener 2 puertos USB3_0').
+hp_elitebook:- laptop,
+            verifica('debe tener 8 Cores_CPU'),
+            verifica('debe tener 16 de RAM'),
+            windows.
+		
+toshiba_l55:- laptop,
+            verifica('debe tener 4 Cores_CPU'),
+            verifica('debe tener 8 de RAM'),
+            verifica('deber ser Uso disenio').
+
 			
 %Reglas de clasificación (son como características genéricas que pueden tener varios modelos).
 %Se puede poner varias veces la misma regla con distinto parámetro en verifica().
