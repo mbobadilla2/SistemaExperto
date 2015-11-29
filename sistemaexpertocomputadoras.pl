@@ -10,7 +10,7 @@
 */
 
 %Predicado final que imprime el resultado.
-comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, CoresCPU, RAM, SO, HDD, USB2_0, USB3_0),
+comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, Pantalla, CoresCPU, RAM, SO, HDD, USB2_0, USB3_0),
 	write('La computadora que deberia elegir es: '),
 	nl,
 	write('Marca: '),
@@ -27,6 +27,9 @@ comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, CoresCPU, RAM, SO, HDD, 
 	nl,
 	write('Precio: $'),
 	write(Precio),
+	nl,
+	write('Pantalla (en pulgadas): '),
+	write(Pantalla),
 	nl,
 	write('Nucleos de CPU: '),
 	write(CoresCPU),
@@ -54,7 +57,7 @@ comprar:-
 	limpiaBC.
 
 %Hipótesis.
-%Estructura: marca, modelo, tipo, uso, precio, cores_CPU, RAM, SO, HD, USB 2.0, USB 3.0.
+%Estructura: marca, modelo, tipo, uso, precio, pulgadas, cores_CPU, RAM, SO, HD, USB 2.0, USB 3.0.
 
 %El ! al final indice un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
 
@@ -68,9 +71,9 @@ comprar:-
 %computadora(toshiba, l55-b5179sm, laptop, disenio, 18920, 4, 8, windows_8_1, 1tb, 2,1).
 %computadora(lenovo, y50-70, laptop, gamer, 18000, 8, 8, windows_8_1, 1tb, 2, 1).
 %computadora(dell, alienware_15_r2, laptop, gamer, 33100, 8, 8, windows_10, 1tb, 0, 3).
-computadora('HP',	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hpenvy14, !.
-computadora('Acer', 'TMB115',			'Laptop', 'Oficina', 	'4860',		'2', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acertmb115, !.
-computadora('Apple','MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'8', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
+computadora('HP',	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hpenvy14, !.
+computadora('Acer', 'TMB115',			'Laptop', 'Oficina', 	'4860',	'11.6"',	'2', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acertmb115, !.
+computadora('Apple','MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'8', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
 %computadora('No se encontro un producto que cubra sus necesidades', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A').
 
 %Escritorio
@@ -93,15 +96,14 @@ hpenvy14:- laptop,
 			windows,
 			verifica('la usara para ver peliculas, videos y escuchar musica'),
 			muchoAlmacenamiento,
+			pantalla,
 			verifica('sobrepasaria los $10,000').
 
 acertmb115:- laptop,
-			otroSo,
 			economico,
 			muchoAlmacenamiento.
 
 macbookpro:- laptop,
-			otroSo,
 			verifica('debe tener mas de 4GB de RAM'),
 			verifica('debe tener SSD en lugar de disco duro'),
 			verifica('sobrepasaria los $20,000').
@@ -113,6 +115,7 @@ laptop:- verifica('debe ser portatil').
 otroSo:- verifica('puede tener un sistema operativo distinto a Windows').
 economico:- verifica('debe ser un equipo economico ($5,000 o menos)').
 muchoAlmacenamiento:- verifica('debe tener gran cantidad de almacenamiento').
+pantalla :- verifica('debe tener una pantalla grande').
 windows:- verifica('debe tener Windows').
 
 
