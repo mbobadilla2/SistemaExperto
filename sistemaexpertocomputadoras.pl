@@ -69,8 +69,8 @@ comprar:-
 %computadora(asus, f455la, laptop, multimedia, 10970, 4, 4, windows_8_1, 1tb, 2, 1).
 %computadora(hp, elitebook_840, laptop, disenio, 30100, 8, 16, windows_8_1, 1tb, 2, 1).
 %computadora(toshiba, l55-b5179sm, laptop, disenio, 18920, 4, 8, windows_8_1, 1tb, 2,1).
-%computadora(lenovo, y50-70, laptop, gamer, 18000, 8, 8, windows_8_1, 1tb, 2, 1).
-%computadora(dell, alienware_15_r2, laptop, gamer, 33100, 8, 8, windows_10, 1tb, 0, 3).
+computadora('lenovo' , 'y50-70' , 'laptop' , 'gamer' , '18000' ,'12"' , '8' , '8GB' , 'windows_8_1' , '1tb' , '2' , '1' ):- lenovo_y50-70, !.                    
+computadora('dell' , 'alienware_15_r3' , 'laptop' , 'gamer' , '33100' ,'15"' , '8' , '8GB' , 'windows_10' , '1tb', '0', '3'):- dell_ alienware_15_r2, !.
 computadora('HP',	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hpenvy14, !.
 computadora('Acer', 'TMB115',			'Laptop', 'Oficina', 	'4860',	'11.6"',	'2', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acertmb115, !.
 computadora('Apple','MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'8', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
@@ -108,6 +108,17 @@ macbookpro:- laptop,
 			verifica('debe tener SSD en lugar de disco duro'),
 			verifica('sobrepasaria los $20,000').
 
+dell_ alienware_15_r2:- laptop,
+            verifica('debe tener 8 de RAM').
+			verifica('debe tener solo puertos USB3_0').
+			verifica('sobrepasaria los $30,000').
+
+lenovo_y50-70:- laptop,
+            verifica('debe tener 8 Cores_CPU').
+            verifica('debe tener 8 de RAM').
+            verifica('deber ser Uso gamer').			
+			
+			
 %Reglas de clasificación (son como características genéricas que pueden tener varios modelos).
 %Se puede poner varias veces la misma regla con distinto parámetro en verifica().
 %Se puede poner más de una condición en cada regla, separándolas por comas.
