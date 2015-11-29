@@ -62,13 +62,13 @@ comprar:-
 %El ! al final indice un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
 
 %Laptop
-%computadora(lenovo, g40-30, laptop, oficina, 7000, 2, 4, windows_8_1, 500gb, 2, 1).
-%computadora(ghia, qcn3540, laptop, oficina, 6060, 4, 4, windows_8_1, 500gb, 2, 1).
-%computadora(dell, inspiron_14_3442, laptop, multimedia, 8550, 4, 4, windows_8_1, 1tb, 2, 1).
-%computadora(hp, 14-af16la, laptop, multimedia, 9000, 4, 6, windows_10, 1tb, 2, 1).
-%computadora(asus, f455la, laptop, multimedia, 10970, 4, 4, windows_8_1, 1tb, 2, 1).
-%computadora(hp, elitebook_840, laptop, disenio, 30100, 8, 16, windows_8_1, 1tb, 2, 1).
-%computadora(toshiba, l55-b5179sm, laptop, disenio, 18920, 4, 8, windows_8_1, 1tb, 2,1).
+computadora('lenovo' , 'g40-30' , 'laptop' , 'oficina' , '7000' ,'11"', '2' , '4GB' , 'windows_8_1' , '500gb' , '2' , '1'):- lenovo_g40-30, !.
+computadora('ghia' , 'qcn3540' , 'laptop' , 'oficina' , '6060' ,'11.2"' , '4' , '4' , 'windows_8_1' , '500gb' , '2' , '1'):- ghia_qcn3540, !.
+computadora('dell' , 'inspiron_14_3442' , 'laptop' , 'multimedia' , '8550' ,'14"' , '4' , '4GB' , 'windows_8_1' , '1tb' , '2' , '1'):- dell_inspiron_14, !.
+computadora('hp' , '14-af16la' , 'laptop' , 'multimedia' , '9000' ,'14"', '4' , '6GB' , 'windows_10' , '1tb' , '2' , '1'):- hp_14-af16la, !.
+computadora('asus' , 'f455la' , 'laptop' , 'multimedia' , '10970' ,'15"', '4' , '4GB' , 'windows_8_1' , '1tb' , '2' , '1'):- asus_f455la, !.
+computadora('hp' , 'elitebook_840' , 'laptop' , 'disenio' , '30100','11.5' , '8' , '16GB' , 'windows_8_1' , '1tb' , '2' , '1'):- hp_elitebook, !.
+computadora('toshiba' , 'l55-b5179sm' , 'laptop' , 'disenio' , '18920' ,'12"' , '4' , '8GB' , 'windows_8_1' , '1tb' , '2' ,'1'):- toshiba_l55, !.
 computadora('lenovo' , 'y50-70' , 'laptop' , 'gamer' , '18000' ,'12"' , '8' , '8GB' , 'windows_8_1' , '1tb' , '2' , '1' ):- lenovo_y50-70, !.                    
 computadora('dell' , 'alienware_15_r3' , 'laptop' , 'gamer' , '33100' ,'15"' , '8' , '8GB' , 'windows_10' , '1tb', '0', '3'):- dell_ alienware_15_r2, !.
 computadora('HP',	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'4', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hpenvy14, !.
@@ -109,13 +109,13 @@ macbookpro:- laptop,
 			verifica('sobrepasaria los $20,000').
 
 dell_ alienware_15_r2:- laptop,
-            verifica('debe tener 8 de RAM').
-			verifica('debe tener solo puertos USB3_0').
+            verifica('debe tener 8 de RAM'),
+			verifica('debe tener solo puertos USB3_0'),
 			verifica('sobrepasaria los $30,000').
 
 lenovo_y50-70:- laptop,
-            verifica('debe tener 8 Cores_CPU').
-            verifica('debe tener 8 de RAM').
+            verifica('debe tener 8 Cores_CPU'),
+            verifica('debe tener 8 de RAM'),
             verifica('deber ser Uso gamer').			
 			
 			
