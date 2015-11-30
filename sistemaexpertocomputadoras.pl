@@ -105,7 +105,8 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 %Las que no llevan paréntesis son reglas de clasificación.
 
 %%%%%%%%%%%%%%%%%%%%Escritorio
- dell_inspiron_3046:- monitorM
+ dell_inspiron_3046:- escritorio,
+ 			 monitorM
              windows,
              ram4,
              muchoAlmacenamiento,
@@ -114,7 +115,8 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 			 verifica('debe tener solo puerto USB3.0').
              			 
 
-ghia_pentium_dual_g8040:- monitorG,
+ghia_pentium_dual_g8040:- escritorio,
+ 			 monitorG,
               linux,
 			  verifica(' no debe tener al menos un puerto USB3.0'),
 			  ram4,
@@ -123,7 +125,8 @@ ghia_pentium_dual_g8040:- monitorG,
 			  economico.
 
 			
-dell_inspiron_2980:- monitorM,
+dell_inspiron_2980:- escritorio,
+ 			 monitorM,
                 windows,
 				monitorM,
 				verifica('puede tener un procesador de gama baja'),
@@ -131,7 +134,8 @@ dell_inspiron_2980:- monitorM,
 				ram2.
                
 
-lenovo_thinkcentre:- monitorG,
+lenovo_thinkcentre:-escritorio,
+ 			  monitorG,
                windows,
 			   ram4,
 			   muchoAlmacenamiento,
@@ -140,7 +144,8 @@ lenovo_thinkcentre:- monitorG,
 			   verifica('debe tener al menos 3 puertos USB3.0').
 
 
-hp_prodesk_400:- monitorG, 
+hp_prodesk_400:- escritorio,
+ 			  monitorG, 
                windows,
 			   ram8,
 			   precioMedio,
@@ -150,26 +155,30 @@ hp_prodesk_400:- monitorG,
 			   verifica('deber tener al menos 6 puertos USB 2.0').
 			   
 
-acer_vx2631g:- 	monitorP,
+acer_vx2631g:- 	escritorio,
+ 			  monitorP,
 				ram4,
 				verifica('la usara principalmente para reproducir contenido multimedia'),
 				costoM,
 				graficosIntegrados.
 
 
-dell_optiplex_9020:- monitorM,
+dell_optiplex_9020:-escritorio,
+ 			   monitorM,
 				ram8,
 				verifica('puede costar mas de $15,000').
 
 
-lenovo_m53p:- 	monitorM,
+lenovo_m53p:- 	escritorio,
+ 			  monitorM,
 				costoM,
 				verifica('puede llevar un procesador de gama media'),
 				ram8,
 				graficosIntegrados.
 
 
-imac:- 			osx,
+imac:- 			escritorio,
+ 			  osx,
 				monitorG,
 				grafica,
 				ram16,
@@ -177,7 +186,8 @@ imac:- 			osx,
 				verifica('puede costar mas de $45,000').
 
 
-ghia_ci7_4790:- costoM,
+ghia_ci7_4790:-escritorio,
+ 			   costoM,
 				monitorM,
 				grafica,
 				ram8,
@@ -185,7 +195,8 @@ ghia_ci7_4790:- costoM,
 				verifica('debe llevar un procesador tope de gama').
 
 
-hp_elite_one800:- 	verifica('costaria al rededor de $25,000'),
+hp_elite_one800:- escritorio,
+ 			  	verifica('costaria al rededor de $25,000'),
 				verifica('debe llevar pantalla tactil'),
 				ram8,
 				grafica,
@@ -249,6 +260,8 @@ lenovo_y50_70:- laptop,
 
 dell_alienware_15_r2:- laptop,
 			ram8,
+
+
 			intel,
 			verifica('debe tener solo puertos USB 3.0'),
 			gamer,
@@ -277,40 +290,7 @@ macbookpro:- laptop,
 			pocoAlmacenamiento,
 			muyCara.
 			
- dell_inspiron_3046:- escritorio,
-             windows,
-             ram4,
-             intel,
-             muchoAlmacenamiento,
-			 verifica('debe tener solo puerto USB3.0').
-             			 
 
-ghia_pentium_dual:- escritorio,
-              linux,
-			  verifica(' no debe tener puerto USB3.0'),
-			  ram4,
-			  economico.
-			
-dell_inspiron_2980:- escritorio,
-               windows,
-			   ram2.
-			   
-               
-
-lenovo_thinkcentre:- escritorio,
-               windows,
-			   ram4,
-			   muchoAlmacenamiento,
-			   precioMedio,
-			   verifica('debe tener 3 puertos USB3.0').
-
-
-hp_prodesk_400:- escritorio,
-               windows,
-			   ram8,
-			   precioMedio,
-			   verifica('deber ser uso Multimedia'),
-			   verifica('deber tener 6 puertos USB 2.0').
 			   
 %Reglas de clasificación (son como características genéricas que pueden tener varios modelos).
 %Se puede poner varias veces la misma regla con distinto parámetro en verifica().
