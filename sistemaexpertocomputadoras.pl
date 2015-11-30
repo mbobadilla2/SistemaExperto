@@ -106,7 +106,7 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 
 %%%%%%%%%%%%%%%%%%%%Escritorio
  dell_inspiron_3046:- escritorio,
- 			 monitorM
+ 			 monitorM,
              windows,
              ram4,
              muchoAlmacenamiento,
@@ -313,8 +313,8 @@ osx:-					verifica('debe tener OS X').
 pantallaG:- 			verifica('debe tener una pantalla grande').
 pantallaP:-				verifica('debe tener una pantalla pequenia (12" o menos)').
 pocoAlmacenamiento:-	verifica('puede tener una unidad de almacenamiento de menos de 256GB').
-precioMedio:-			verifica('debe costar entre $15,000 y $20,000').
-ram16:-					verifica('debe tener al menos 16GB de RAM').
+
+
 ram2:-                  verifica('debe tener al menos 2GB de RAM').
 ram4:-					verifica('debe tener al menos 4GB de RAM').
 ram6:-					verifica('debe tener al menos 6GB de RAM').
