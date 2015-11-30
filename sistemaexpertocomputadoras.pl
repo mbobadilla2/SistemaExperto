@@ -10,7 +10,7 @@
 */
 
 %Predicado final que imprime el resultado.
-comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, Pantalla, Procesador, Tarjeta_video, RAM, SO, HDD, USB2_0, USB3_0),
+comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, Pantalla, Procesador, Tarjeta_video, RAM, SO, HDD, USB2_0, USB3_0, NombreImg),
 	write('La computadora que deberia elegir es: '),
 	nl,
 	write('Marca: '),
@@ -52,6 +52,14 @@ comprar:- computadora(Marca, Modelo, Tipo, Uso, Precio, Pantalla, Procesador, Ta
 	write('Cantidad de puertos USB 3.0: '),
 	write(USB3_0),
 	nl,
+	%Muestra la imagen de la computadora escogida.
+	atom_concat('sistemaexperto_imagenes/', NombreImg, RutaModelo),
+	atom_concat(RutaModelo, '.jpg', RutaModeloExtension),
+	new(Img, picture('Pienso en...')),
+	send(Img, width(345)),
+	send(Img, height(585)),
+	send(Img, open),
+	send(Img, display, new(_, bitmap(RutaModeloExtension))),
 	limpiaBC.
 %Si ninguna computadora cumple los requerimientos, mostramos este mensaje :(
 comprar:-
@@ -65,19 +73,20 @@ comprar:-
 %El ! al final indica un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
 
 %Laptop
-computadora('Apple', 	'MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'Retina 13"',	'Intel Core i5', 'Intel Iris Graphics 6100', '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2'):- macbookpro, !.
-computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30100',	'11.5"','Intel Core i5','Intel HD Graphics 5500', '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1'):- hp_elitebook, !.
-computadora('Lenovo',   'Y50-70', 			'Laptop', 'Gamer',		'18000',	'12"',	'Intel Core i7', 'NVIDIA GeForce GTX 860M', '8GB',		'Windows 8.1',	'1TB (HDD)', 	'2', 	'1'):- lenovo_y50_70, !.                    
-computadora('Dell',		'Alienware 15 r2',	'Laptop', 'Gamer',		'33100',	'15"',	' Intel Core i7', 'NVIDIA GeForce GTX 970M', '8GB',		'Windows 10',	'1TB (HDD)', 	'0', 	'3'):- dell_alienware_15_r2, !.
-computadora('Toshiba',  'L55-b5179sm', 		'Laptop', 'Disenio', 	'18920',	'12"', 	' Intel Core i7', 'Intel HD Graphics 5500', '8GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2',	'1'):- toshiba_l55, !.
-computadora('HP', 		'14-af16la', 		'Laptop', 'Multimedia', '9000',		'14"', 	'AMD A8', 'AMD Radeon R5', '6GB', 	'Windows 10', 	'1TB (HDD)', 	'2', 	'1'):- hp_14_af16la, !.
-computadora('HP',	 	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'Intel Core i5', 'Intel HD Graphics 5500', '6GB',		'Windows 8.1',	'1TB (HDD)',	'1',	'2'):- hp_envy14, !.
-computadora('GHIA', 	'Qcn3540', 			'Laptop', 'Oficina', 	'6060',		'11.2"','Intel Pentium N3540', 'Intel HD Graphics', '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1'):- ghia_qcn3540, !.
-computadora('Dell', 	'Inspiron 14-3442', 'Laptop', 'Multimedia', '8550',		'14"', 	'Intel Core i3', 'Intel HD Graphics 4400', '4GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1'):- dell_inspiron_14, !.
-computadora('Asus',	 	'F455la', 			'Laptop', 'Multimedia', '10970',	'15"', 	'Intel Core i5', 'Intel HD Graphics 5500', '4GB',		'Windows 8.1', 	'1TB (HDD)', 	'1', 	'2'):- asus_f455la, !.
-computadora('Lenovo', 	'G40-30', 			'Laptop', 'Oficina', 	'7000',		'14"', 	'Intel Celeron N2840', 'Intel HD Graphics 1100', '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1'):- lenovo_g40_30, !.
-computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4860',		'11.6"','Intel Celeron N2940', 'Intel HD Graphics 1100', '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1'):- acer_tmb115, !.
+computadora('Apple', 	'MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'Intel Core i5', 	'Intel Iris Graphics 6100',	   '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2', 'macbookpro')			:- 	macbookpro, !.
+computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30100',	'11.5"','Intel Core i5',	'Intel HD Graphics 5500', 	   '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'hp_elitebook')		:- 	hp_elitebook, !.
+computadora('Lenovo',   'Y50-70', 			'Laptop', 'Gamer',		'18000',	'12"',	'Intel Core i7', 	'NVIDIA GeForce GTX 860M', 	   '8GB',	'Windows 8.1',	'1TB (HDD)', 	'2', 	'1', 'lenovo_y50_70')		:- 	lenovo_y50_70, !.                    
+computadora('Dell',		'Alienware 15 r3',	'Laptop', 'Gamer',		'33100',	'15"',	'Intel Core i7', 	'NVIDIA GeForce GTX 970M', 	   '8GB',	'Windows 10',	'1TB (HDD)', 	'0', 	'3', 'dell_alienware_15_r2'):- 	dell_alienware_15_r2, !.
+computadora('Toshiba',  'L55-b5179sm', 		'Laptop', 'Disenio', 	'18920',	'12"', 	'Intel Core i7', 	'Intel HD Graphics 5500', 	   '8GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2',	'1', 'toshiba_l55')			:- 	toshiba_l55, !.
+computadora('HP', 		'14-af16la', 		'Laptop', 'Multimedia', '9000',		'14"', 	'AMD A8', 			'AMD Radeon R5', 			   '6GB', 	'Windows 10', 	'1TB (HDD)', 	'2', 	'1', 'hp_14_af16la')		:- 	hp_14_af16la, !.
+computadora('HP',	 	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'Intel Core i5', 	'Intel HD Graphics 5500', 	   '6GB',	'Windows 8.1',	'1TB (HDD)',	'1',	'2', 'hp_envy14')			:- 	hp_envy14, !.
+computadora('GHIA', 	'Qcn3540', 			'Laptop', 'Oficina', 	'6060',		'11.2"','Intel Pentium N3540','Intel HD Graphics','4', 	   '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'ghia_qcn3540')		:- 	ghia_qcn3540, !.
+computadora('Dell', 	'Inspiron 14-3442', 'Laptop', 'Multimedia', '8550',		'14"', 	'Intel Core i3', 	'Intel HD Graphics 4400','4',  '4GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'dell_inspiron_14')	:- 	dell_inspiron_14, !.
+computadora('Asus',	 	'F455la', 			'Laptop', 'Multimedia', '10970',	'15"', 	'Intel Core i5', 	'Intel HD Graphics 5500','4',  '4GB',	'Windows 8.1', 	'1TB (HDD)', 	'1', 	'2', 'asus_f455la')			:- 	asus_f455la, !.
+computadora('Lenovo', 	'G40-30', 			'Laptop', 'Oficina', 	'7000',		'11"', 	'Intel Celeron N2840','Intel HD Graphics 1100','2','4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'lenovo_g40_30')		:- 	lenovo_g40_30, !.
+computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4860',		'11.6"','Intel Celeron N2940','Intel HD Graphics 1100','2','4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1', 'acer_tmb115')			:- 	acer_tmb115, !.
 %computadora('No se encontro un producto que cubra sus necesidades', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A').
+
 
 %Escritorio
 /*computadora(dell, inspiron_3646, escritorio, oficina, 7260, 2, 4, windows_8_1, 500gb, 4, 1).
