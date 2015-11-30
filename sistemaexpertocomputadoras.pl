@@ -105,7 +105,7 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 %Las que no llevan paréntesis son reglas de clasificación.
 
 %%%%%%%%%%%%%%%%%%%%Escritorio
- dell_inspiron_3046:- escritorio,
+ dell_inspiron_3046:- 
  			 monitorM,
              windows,
              ram4,
@@ -115,7 +115,7 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 			 verifica('debe tener solo puerto USB3.0').
              			 
 
-ghia_pentium_dual_g8040:- escritorio,
+ghia_pentium_dual:- 
  			 monitorG,
               linux,
 			  verifica(' no debe tener al menos un puerto USB3.0'),
@@ -125,7 +125,7 @@ ghia_pentium_dual_g8040:- escritorio,
 			  economico.
 
 			
-dell_inspiron_2980:- escritorio,
+dell_inspiron_2980:- 
  			 monitorM,
                 windows,
 				monitorM,
@@ -134,7 +134,7 @@ dell_inspiron_2980:- escritorio,
 				ram2.
                
 
-lenovo_thinkcentre:-escritorio,
+lenovo_thinkcentre:-
  			  monitorG,
                windows,
 			   ram4,
@@ -144,7 +144,7 @@ lenovo_thinkcentre:-escritorio,
 			   verifica('debe tener al menos 3 puertos USB3.0').
 
 
-hp_prodesk_400:- escritorio,
+hp_prodesk_400:- 
  			  monitorG, 
                windows,
 			   ram8,
@@ -155,7 +155,7 @@ hp_prodesk_400:- escritorio,
 			   verifica('deber tener al menos 6 puertos USB 2.0').
 			   
 
-acer_vx2631g:- 	escritorio,
+acer_vx2631g:- 	
  			  monitorP,
 				ram4,
 				verifica('la usara principalmente para reproducir contenido multimedia'),
@@ -163,13 +163,13 @@ acer_vx2631g:- 	escritorio,
 				graficosIntegrados.
 
 
-dell_optiplex_9020:-escritorio,
+dell_optiplex_9020:-
  			   monitorM,
 				ram8,
 				verifica('puede costar mas de $15,000').
 
 
-lenovo_m53p:- 	escritorio,
+lenovo_m53p:- 	
  			  monitorM,
 				costoM,
 				verifica('puede llevar un procesador de gama media'),
@@ -177,7 +177,7 @@ lenovo_m53p:- 	escritorio,
 				graficosIntegrados.
 
 
-imac:- 			escritorio,
+imac:- 			
  			  osx,
 				monitorG,
 				grafica,
@@ -186,8 +186,7 @@ imac:- 			escritorio,
 				verifica('puede costar mas de $45,000').
 
 
-ghia_ci7_4790:-escritorio,
- 			   costoM,
+ghia_ci7_4790:-costoM,
 				monitorM,
 				grafica,
 				ram8,
@@ -195,7 +194,7 @@ ghia_ci7_4790:-escritorio,
 				verifica('debe llevar un procesador tope de gama').
 
 
-hp_elite_one800:- escritorio,
+hp_elite_one800:- 
  			  	verifica('costaria al rededor de $25,000'),
 				verifica('debe llevar pantalla tactil'),
 				ram8,
