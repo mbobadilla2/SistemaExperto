@@ -95,7 +95,6 @@ computadora('Dell',   	'Inspiron 2980',      	'Escritorio', 'Oficina',   	'6,300
 computadora('Lenovo', 	'Thinkcentre',       	'Escritorio', 'Multimedia', '12,000', '29"',  			'Intel Core i5' ,       'Intel HD Graphics 4400',   '4GB',  'Windows 8.1', '1TB',    '3', '3', 'lenovo_thinkcentre'):- lenovo_thinkcentre, !.                    
 computadora('HP',     	'Prodesk 400',       	'Escritorio', 'Multimedia', '10,500', '29"',  			'AMD A8',               'AMD Radeon R7',           	'8GB',  'Windows 8.1', '500GB',  '6', '2', 'hp_prodesk_400')	:- hp_prodesk_400, !.
 computadora('Acer', 	'Vx2631g', 		 		'Escritorio', 'Multimedia', '10,600', '17"', 			'Intel Core i3', 		'Intel H81 Express', 		'4GB',	'Windows 7', 	'500GB', '4', '2', 'acer_vx2631g')		:- acer_vx2631g, !.
-computadora('Dell', 	'Optiplex 9020', 		'Escritorio', 'Disenio', 	'17,380', '22"', 			'Intel Core i5', 		'Integrados Intel', 		'8GB',	'Windows 8.1', 	'1TB', 	 '2', '6', 'dell_optiplex_9020'):- dell_optiplex_9020, !.
 computadora('Lenovo', 	'M53p', 		 		'Escritorio', 'Disenio', 	'12,470', '22"', 			'Intel Celeron', 		'Integrados Intel',			'8GB',	'Windows 7', 	'1TB', 	 '2', '6', 'lenovo_m53p')		:- lenovo_m53p, !.
 computadora('Apple', 	'iMac', 		 		'Escritorio', 'Disenio', 	'48,000', '27" Retina 5K', 	'Intel Core i5', 		'AMD Radeon R9 M395.', 		'16GB', 'OS X',			'2TB', 	 '0', '4', 'imac')				:- imac, !.
 computadora('GHIA', 	'Ci7 4790', 	 		'Escritorio', 'Gamer', 	  	'12,200', '24"', 			'Intel Core i7', 		'Intel HD 4600', 			'8GB', 	'Windows 8.1', 	'1TB',	 '2', '8', 'ghia_ci7_4790')		:- ghia_ci7_4790, !.
@@ -158,10 +157,6 @@ acer_vx2631g:-
 				graficosIntegrados.
 
 
-dell_optiplex_9020:-
- 			   monitorM,
-				ram8,
-				verifica('puede costar mas de $15,000').
 
 
 lenovo_m53p:- 	
