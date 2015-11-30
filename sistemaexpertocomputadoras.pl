@@ -73,39 +73,121 @@ comprar:-
 %El ! al final indica un corte. Esto es para que una vez que se llegó al resultado correcto, no se sigan evaluando otras hipótesis.
 
 %Laptop
-computadora('Apple', 	'MacBook Pro',		'Laptop', 'Disenio', 	'32000',	'13"',	'Intel Core i5', 	'Intel Iris Graphics 6100',	   '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2', 'macbookpro')			:- 	macbookpro, !.
-computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30100',	'11.5"','Intel Core i5',	'Intel HD Graphics 5500', 	   '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'hp_elitebook')		:- 	hp_elitebook, !.
-computadora('Lenovo',   'Y50-70', 			'Laptop', 'Gamer',		'18000',	'12"',	'Intel Core i7', 	'NVIDIA GeForce GTX 860M', 	   '8GB',	'Windows 8.1',	'1TB (HDD)', 	'2', 	'1', 'lenovo_y50_70')		:- 	lenovo_y50_70, !.                    
-computadora('Dell',		'Alienware 15 r3',	'Laptop', 'Gamer',		'33100',	'15"',	'Intel Core i7', 	'NVIDIA GeForce GTX 970M', 	   '8GB',	'Windows 10',	'1TB (HDD)', 	'0', 	'3', 'dell_alienware_15_r2'):- 	dell_alienware_15_r2, !.
-computadora('Toshiba',  'L55-b5179sm', 		'Laptop', 'Disenio', 	'18920',	'12"', 	'Intel Core i7', 	'Intel HD Graphics 5500', 	   '8GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2',	'1', 'toshiba_l55')			:- 	toshiba_l55, !.
-computadora('HP', 		'14-af16la', 		'Laptop', 'Multimedia', '9000',		'14"', 	'AMD A8', 			'AMD Radeon R5', 			   '6GB', 	'Windows 10', 	'1TB (HDD)', 	'2', 	'1', 'hp_14_af16la')		:- 	hp_14_af16la, !.
-computadora('HP',	 	'Envy 14 u290la',	'Laptop', 'Multimedia', '12000',	'14"',	'Intel Core i5', 	'Intel HD Graphics 5500', 	   '6GB',	'Windows 8.1',	'1TB (HDD)',	'1',	'2', 'hp_envy14')			:- 	hp_envy14, !.
-computadora('GHIA', 	'Qcn3540', 			'Laptop', 'Oficina', 	'6060',		'11.2"','Intel Pentium N3540','Intel HD Graphics'  , 	   '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'ghia_qcn3540')		:- 	ghia_qcn3540, !.
-computadora('Dell', 	'Inspiron 14-3442', 'Laptop', 'Multimedia', '8550',		'14"', 	'Intel Core i3', 	'Intel HD Graphics 4400',      '4GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'dell_inspiron_14')	:- 	dell_inspiron_14, !.
-computadora('Asus',	 	'F455la', 			'Laptop', 'Multimedia', '10970',	'15"', 	'Intel Core i5', 	'Intel HD Graphics 5500',      '4GB',	'Windows 8.1', 	'1TB (HDD)', 	'1', 	'2', 'asus_f455la')			:- 	asus_f455la, !.
-computadora('Lenovo', 	'G40-30', 			'Laptop', 'Oficina', 	'7000',		'11"', 	'Intel Celeron N2840','Intel HD Graphics 1100',    '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'lenovo_g40_30')		:- 	lenovo_g40_30, !.
-computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4860',		'11.6"','Intel Celeron N2940','Intel HD Graphics 1100',    '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1', 'acer_tmb115')			:- 	acer_tmb115, !.
+computadora('Apple', 	'MacBook Pro',		'Laptop', 'Disenio', 	'32,000',	'13"',	'Intel Core i5', 	'Intel Iris Graphics 6100',	   '16GB', 	'OS X', 		'128GB (SSD)', 	'0', 	'2', 'macbookpro')			:- 	macbookpro, !.
+computadora('HP', 		'Elitebook 840', 	'Laptop', 'Disenio', 	'30,100',	'11.5"','Intel Core i5',	'Intel HD Graphics 5500', 	   '16GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'hp_elitebook')		:- 	hp_elitebook, !.
+computadora('Lenovo',   'Y50-70', 			'Laptop', 'Gamer',		'18,000',	'12"',	'Intel Core i7', 	'NVIDIA GeForce GTX 860M', 	   '8GB',	'Windows 8.1',	'1TB (HDD)', 	'2', 	'1', 'lenovo_y50_70')		:- 	lenovo_y50_70, !.                    
+computadora('Dell',		'Alienware 15 r3',	'Laptop', 'Gamer',		'33,100',	'15"',	'Intel Core i7', 	'NVIDIA GeForce GTX 970M', 	   '8GB',	'Windows 10',	'1TB (HDD)', 	'0', 	'3', 'dell_alienware_15_r2'):- 	dell_alienware_15_r2, !.
+computadora('Toshiba',  'L55-b5179sm', 		'Laptop', 'Disenio', 	'18,920',	'12"', 	'Intel Core i7', 	'Intel HD Graphics 5500', 	   '8GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2',	'1', 'toshiba_l55')			:- 	toshiba_l55, !.
+computadora('HP', 		'14-af16la', 		'Laptop', 'Multimedia', '9,000',	'14"', 	'AMD A8', 			'AMD Radeon R5', 			   '6GB', 	'Windows 10', 	'1TB (HDD)', 	'2', 	'1', 'hp_14_af16la')		:- 	hp_14_af16la, !.
+computadora('HP',	 	'Envy 14 u290la',	'Laptop', 'Multimedia', '12,000',	'14"',	'Intel Core i5', 	'Intel HD Graphics 5500', 	   '6GB',	'Windows 8.1',	'1TB (HDD)',	'1',	'2', 'hp_envy14')			:- 	hp_envy14, !.
+computadora('GHIA', 	'Qcn3540', 			'Laptop', 'Oficina', 	'6,060',	'11.2"','Intel Pentium N3540','Intel HD Graphics', 	   	   '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'ghia_qcn3540')		:- 	ghia_qcn3540, !.
+computadora('Dell', 	'Inspiron 14-3442', 'Laptop', 'Multimedia', '8,550',	'14"', 	'Intel Core i3', 	'Intel HD Graphics 4400',  	   '4GB', 	'Windows 8.1', 	'1TB (HDD)', 	'2', 	'1', 'dell_inspiron_14')	:- 	dell_inspiron_14, !.
+computadora('Asus',	 	'F455la', 			'Laptop', 'Multimedia', '10,970',	'15"', 	'Intel Core i5', 	'Intel HD Graphics 5500',  	   '4GB',	'Windows 8.1', 	'1TB (HDD)', 	'1', 	'2', 'asus_f455la')			:- 	asus_f455la, !.
+computadora('Lenovo', 	'G40-30', 			'Laptop', 'Oficina', 	'7,000',	'11"', 	'Intel Celeron N2840','Intel HD Graphics 1100',    '4GB', 	'Windows 8.1', 	'500GB (HDD)', 	'2', 	'1', 'lenovo_g40_30')		:- 	lenovo_g40_30, !.
+computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4,860',	'11.6"','Intel Celeron N2940','Intel HD Graphics 1100',	   '4GB', 	'Linux Limpus',	'320GB (HDD)', 	'2', 	'1', 'acer_tmb115')			:- 	acer_tmb115, !.
 %computadora('No se encontro un producto que cubra sus necesidades', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A').
 
 
 %Escritorio
-computadora('Dell' ,   'Inspiron 3046' ,      'Escritorio' , 'Oficina' ,  '7500',    '21"' ,  'Intel Core i3' ,       'Intel HD Graphics'  ,      '4GB' , 'Windows 8.1' , '750GB (HDD)' , '4' , '1', 'Dell_Inspiron_3046' ):- dell_inspiron_3046, !.
-computadora('GHIA' ,   'Pentium Dual g8040' , 'Escritorio' , 'Oficina' ,  '4700' ,   '29"' ,  'Intel Celeron N2840' , 'Intel HD Graphics 1100'  , '4GB' , 'Linux' ,       '500GB (HDD)' , '4' , '0', 'GHIA_Pentium_dual'):- ghia_pentium_dual, !.
-computadora('Dell' ,   'Inspiron 2980' ,      'Escritorio' , 'Oficina' ,  '6300',    '23"'   ,'Intel Celeron N3540',  'Intel HD Graphics 1100' ,  '2GB' , 'Windows 8.1' , '750GB (HDD)' , '3' , '1', 'Dell_Inspiron_2980'):- dell_inspiron_2980, !.
-computadora('Lenovo',  'Thinkcentre',         'Escritorio', 'Multimedia', '12000',   '29"',   'Intel Core i5'  ,      'Intel HD Graphics 4400',   '4GB',  'windows 8.1' , '1TB (HDD)',    '3',  '3', 'Lenovo_Thinkcentre'):- lenovo_thinkcentre, !.                    
-computadora('HP',      'ProDesk 400',         'Escritorio', 'Multimedia', '10500',   '29"' ,  'AMD A8' ,              'AMD Radeon R7' ,           '8GB',  'windows 8.1', '500GB (HDD)',   '6',  '2', 'HP_Prodesk_400'):- hp_prodesk_400, !.
-/**
-computadora(acer, vx2631g, escritorio, multimedia, 10600, 4, 4, windows_7, 500gb, 4, 2).
-computadora(dell, optiplex_9020, escritorio, disenio, 17380, 8, 8, windows_8_1, 1tb, 2, 6).
-computadora(lenovo, m53p, escritorio, disenio, 12470, 8, 8, windows_7, 1tb, 2, 6).
-computadora(apple, imac, escritorio, disenio, 48000, 4, 8, OS_X, 2tb, 0, 4).
-computadora(ghia, ci7_4790, escritorio, gamer, 12200, 8, 8, windows_8_1, 2tb, 2, 8).
-computadora(hp, elite_one_800, escritorio, gamer, 24900, 8, 8, windows_8_1, 1tb, 4, 4).
-**/
+computadora('Dell',   	'Inspiron 3046',      	'Escritorio', 'Oficina',   	'7,500',  '21"',  			'Intel Core i3',        'Intel HD Graphics' ,      	'4GB',	'Windows 8.1', '750GB',  '4', '1', 'dell_inspiron_3046'):- dell_inspiron_3046, !.
+computadora('GHIA',   	'Pentium dual g8040', 	'Escritorio', 'Oficina',   	'4,700',  '29"',  			'Intel Celeron N2840',  'Intel HD Graphics 1100', 	'4GB', 	'Linux',       '500GB',  '4', '0', 'ghia_pentium_dual')	:- ghia_pentium_dual, !.
+computadora('Dell',   	'Inspiron 2980',      	'Escritorio', 'Oficina',   	'6,300',  '23"',  			'Intel Celeron N3540',  'Intel HD Graphics 1100',  	'2GB', 	'Windows 8.1', '750GB',  '3', '1', 'dell_inspiron_2980'):- dell_inspiron_2980, !.
+computadora('Lenovo', 	'Thinkcentre',       	'Escritorio', 'Multimedia', '12,000', '29"',  			'Intel Core i5' ,       'Intel HD Graphics 4400',   '4GB',  'Windows 8.1', '1TB',    '3', '3', 'lenovo_thinkcentre'):- lenovo_thinkcentre, !.                    
+computadora('HP',     	'Prodesk 400',       	'Escritorio', 'Multimedia', '10,500', '29"',  			'AMD A8',               'AMD Radeon R7',           	'8GB',  'Windows 8.1', '500GB',  '6', '2', 'hp_prodesk_400')	:- hp_prodesk_400, !.
+computadora('Acer', 	'Vx2631g', 		 		'Escritorio', 'Multimedia', '10,600', '17"', 			'Intel Core i3', 		'Intel H81 Express', 		'4GB',	'Windows 7', 	'500GB', '4', '2', 'acer_vx2631g')		:- acer_vx2631g, !.
+computadora('Dell', 	'Optiplex 9020', 		'Escritorio', 'Disenio', 	'17,380', '22"', 			'Intel Core i5', 		'Integrados Intel', 		'8GB',	'Windows 8.1', 	'1TB', 	 '2', '6', 'dell_optiplex_9020'):- dell_optiplex_9020, !.
+computadora('Lenovo', 	'M53p', 		 		'Escritorio', 'Disenio', 	'12,470', '22"', 			'Intel Celeron', 		'Integrados Intel',			'8GB',	'Windows 7', 	'1TB', 	 '2', '6', 'lenovo_m53p')		:- lenovo_m53p, !.
+computadora('Apple', 	'iMac', 		 		'Escritorio', 'Disenio', 	'48,000', '27" Retina 5K', 	'Intel Core i5', 		'AMD Radeon R9 M395.', 		'16GB', 'OS X',			'2TB', 	 '0', '4', 'imac')				:- imac, !.
+computadora('GHIA', 	'Ci7 4790', 	 		'Escritorio', 'Gamer', 	  	'12,200', '24"', 			'Intel Core i7', 		'Intel HD 4600', 			'8GB', 	'Windows 8.1', 	'1TB',	 '2', '8', 'ghia_ci7_4790')		:- ghia_ci7_4790, !.
+computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23" (Tactil)',	'Intel Core i7', 		'Intel HD 4600', 			'8GB', 	'Windows 8.1', 	'1TB', 	 '4', '4', 'hp_elite_one800')	:- hp_elite_one800, !.
 
 %Reglas que identifican a cada computadora (Se deben poner cosas que diferencíen a un modelo del resto).
 %Las que no llevan paréntesis son reglas de clasificación.
 
+%%%%%%%%%%%%%%%%%%%%Escritorio
+ dell_inspiron_3046:- windows,
+             ram4,
+             muchoAlmacenamiento,
+             monitorP,
+             verifica('debe costar menos de $10,000'),
+			 verifica('debe tener solo puerto USB3.0').
+             			 
+
+ghia_pentium_dual_g8040:- linux,
+			  verifica(' no debe tener al menos un puerto USB3.0'),
+			  ram4,
+			  monitorG,
+			  verifica('puede tener un procesador de gama baja'),
+			  economico.
+
+			
+dell_inspiron_2980:- windows,
+				monitorM,
+				verifica('puede tener un procesador de gama baja'),
+				verifica('la usara principalmete para programas de oficina'),
+				ram2.
+               
+
+lenovo_thinkcentre:- windows,
+			   ram4,
+			   muchoAlmacenamiento,
+			   precioMedio,
+			   monitorG,
+			   verifica('debe tener al menos 3 puertos USB3.0').
+
+
+hp_prodesk_400:- windows,
+			   ram8,
+			   precioMedio,
+			   monitorG,
+			   verifica('debe tener un procesador tope de gama'),
+			   verifica('deber ser uso multimedia'),
+			   verifica('deber tener al menos 6 puertos USB 2.0').
+			   
+
+acer_vx2631g:- 	monitorP,
+				ram4,
+				verifica('la usara principalmente para reproducir contenido multimedia'),
+				costoM,
+				graficosIntegrados.
+
+
+dell_optiplex_9020:- monitorM,
+				ram8,
+				verifica('puede costar mas de $15,000').
+
+
+lenovo_m53p:- 	monitorM,
+				costoM,
+				verifica('puede llevar un procesador de gama media'),
+				ram8,
+				graficosIntegrados.
+
+
+imac:- 			osx,
+				monitorG,
+				grafica,
+				ram16,
+				verifica('puede tener solo puertos USB 3.0'),
+				verifica('puede costar mas de $45,000').
+
+
+ghia_ci7_4790:- costoM,
+				monitorM,
+				grafica,
+				ram8,
+				gamer,
+				verifica('debe llevar un procesador tope de gama').
+
+
+hp_elite_one800:- 	verifica('costaria al rededor de $25,000'),
+				verifica('debe llevar pantalla tactil'),
+				ram8,
+				grafica,
+				monitorM,
+				verifica('debe llevar un procesador tope de gama').
+
+%%%%%%%%%%%%%%%%%%%%Laptos
 lenovo_g40_30:- laptop,
 			intel,
 			ram4,
@@ -136,7 +218,7 @@ asus_f455la:- laptop,
 			intel,
 			ram4,
 			pantallaP,
-            verifica('deber tener 2 puertos USB 3.0'),
+            verifica('deber tener al menos 2 puertos USB 3.0'),
             noPortable.
 
 
@@ -160,14 +242,13 @@ lenovo_y50_70:- laptop,
 			pantallaP,
             gamer.
 
-dell_alienware_15_r2:-  laptop,
-						ram8,
-						intel,
-						verifica('debe tener solo puertos USB3.0'),
-						gamer,
-						noPortable,
-						muyCara.
-
+dell_alienware_15_r2:- laptop,
+			ram8,
+			intel,
+			verifica('debe tener solo puertos USB 3.0'),
+			gamer,
+			noPortable,
+			muyCara.
 
 hp_envy14:- laptop,
 			windows,
@@ -226,33 +307,39 @@ hp_prodesk_400:- escritorio,
 			   verifica('deber ser uso Multimedia'),
 			   verifica('deber tener 6 puertos USB 2.0').
 			   
-			   
-			
 %Reglas de clasificación (son como características genéricas que pueden tener varios modelos).
 %Se puede poner varias veces la misma regla con distinto parámetro en verifica().
 %Se puede poner más de una condición en cada regla, separándolas por comas.
-escritorio:-            verifica('debe ser una de escritorio'). 
-laptop:- 				verifica('debe ser una laptop').
+%escritorio:- 			verifica('debe ser de escritorio').
+costoM:- 				verifica('debe costar entre $10,000 y $15,000').
 economico:- 			verifica('debe ser un equipo economico ($5,000 o menos)').
+gamer:-					verifica('la usara mas bien para jugar videojuegos').
+grafica:- 				verifica('debe tener una tarjeta de video de alto rendimiento').
+graficosIntegrados:- 	verifica('puede tener una tarjeta grafica de gama baja').
+laptop:- 				verifica('debe ser una laptop').
+linux:-					verifica('debe tener Linux').
+monitorG:- 				verifica('debe tener un monitor grande (mas de 23 pulgadas)').
+monitorM:- 				verifica('debe tener un monitor mediano (entre 20 y 23 pulgadas)').
+monitorP:- 				verifica('puede tener un monitor pequenio (menos de 20 pulgadas)').
 muchoAlmacenamiento:- 	verifica('debe tener gran cantidad de almacenamiento (500GB o mas)').
-pocoAlmacenamiento:-	verifica('puede tener una unidad de almacenamiento de menos de 256GB').
+muyCara:-				verifica('costaria mas de $27000 pesos').
+noPortable:-			verifica('puede perder portabilidad a cambio de potencia').
+osx:-					verifica('debe tener OS X').
 pantallaG:- 			verifica('debe tener una pantalla grande').
 pantallaP:-				verifica('debe tener una pantalla pequenia (12" o menos)').
-windows:- 				verifica('debe tener Windows').
-osx:-					verifica('debe tener OS X').
-linux:-					verifica('debe tener Linux').
-muyCara:-				verifica('costaria mas de $27000 pesos').
-gamer:-					verifica('la usara mas bien para jugar videojuegos').
-noPortable:-			verifica('puede perder portabilidad a cambio de potencia').
+pocoAlmacenamiento:-	verifica('puede tener una unidad de almacenamiento de menos de 256GB').
+precioMedio:-			verifica('debe costar entre $15,000 y $20,000').
+ram16:-					verifica('debe tener al menos 16GB de RAM').
 ram2:-                  verifica('debe tener al menos 2GB de RAM').
 ram4:-					verifica('debe tener al menos 4GB de RAM').
 ram6:-					verifica('debe tener al menos 6GB de RAM').
 ram8:-					verifica('debe tener al menos 8GB de RAM').
 ram16:-					verifica('debe tener al menos 16GB de RAM').
 precioMedio:-			verifica('debe costar entre $15,000 y $20,000').
-intel:-				verifica('debe tener un procesador Intel').
-amd:-				verifica('debe tener un procesador AMD').
+intel:-					verifica('debe tener un procesador Intel').
+amd:-					verifica('debe tener un procesador AMD').
 ssd:-					verifica('debe tener SSD en lugar de disco duro').
+windows:- 				verifica('debe tener Windows').
 
 %Preguntas al usuario.
 pregunta(Caracteristica):-
