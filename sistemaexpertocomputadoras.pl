@@ -89,50 +89,51 @@ computadora('Acer',  	'TMB115',			'Laptop', 'Oficina', 	'4860',		'11.6"','Intel 
 
 
 %Escritorio
-computadora('Dell' ,   'Inspiron_3046' ,      'Escritorio' , 'Oficina' ,  '7500',    '21"' ,  'Intel Core i3' ,       'Intel HD Graphics'  ,      '4GB' , 'windows_8_1' , '750GB (HDD)' , '4' , '1', 'Dell_Inspiron_3046' ):- Dell_Inspiron_3046, !.
-computadora('GHIA' ,   'Pentium_dual_g8040' , 'Escritorio' , 'Oficina' ,  '4700' ,   '29"' ,  'Intel Celeron N2840' , 'Intel HD Graphics 1100'  , '4GB' , 'linux' ,       '500GB (HDD)' , '4' , '0', 'GHIA_Pentium_dual'):- GHIA_Pentium_dual, !.
-computadora('Dell' ,   'Inspiron_2980' ,      'Escritorio' , 'Oficina' ,  '6300',    '23"'   ,'Intel Celeron N3540',  'Intel HD Graphics 1100' ,  '2GB' , 'windows_8_1' , '750GB (HDD)' , '3' , '1', 'Dell_Inspiron_2980'):- Dell_Inspiron_2980, !.
-computadora('Lenovo',  'Thinkcentre',         'Escritorio', 'Multimedia', '12000',   '29"',   'Intel Core i5'  ,      'Intel HD Graphics 4400',   '4GB',  'windows_8_1' , '1TB (HDD)',    '3',  '3', 'Lenovo_Thinkcentre'):- Lenovo_Thinkcentre, !.                    
-computadora('HP',      'Prodesk_400',         'Escritorio', 'Multimedia', '10500',   '29"' ,  'AMD A8' ,              'AMD Radeon R7' ,           '8GB',  'windows_8_1', '500GB (HDD)',   '6',  '2', 'HP_Prodesk_400'):- HP_Prodesk_400, !.
+computadora('Dell' ,   'Inspiron 3046' ,      'Escritorio' , 'Oficina' ,  '7500',    '21"' ,  'Intel Core i3' ,       'Intel HD Graphics'  ,      '4GB' , 'Windows 8.1' , '750GB (HDD)' , '4' , '1', 'Dell_Inspiron_3046' ):- dell_inspiron_3046, !.
+computadora('GHIA' ,   'Pentium Dual g8040' , 'Escritorio' , 'Oficina' ,  '4700' ,   '29"' ,  'Intel Celeron N2840' , 'Intel HD Graphics 1100'  , '4GB' , 'Linux' ,       '500GB (HDD)' , '4' , '0', 'GHIA_Pentium_dual'):- ghia_pentium_dual, !.
+computadora('Dell' ,   'Inspiron 2980' ,      'Escritorio' , 'Oficina' ,  '6300',    '23"'   ,'Intel Celeron N3540',  'Intel HD Graphics 1100' ,  '2GB' , 'Windows 8.1' , '750GB (HDD)' , '3' , '1', 'Dell_Inspiron_2980'):- dell_inspiron_2980, !.
+computadora('Lenovo',  'Thinkcentre',         'Escritorio', 'Multimedia', '12000',   '29"',   'Intel Core i5'  ,      'Intel HD Graphics 4400',   '4GB',  'windows 8.1' , '1TB (HDD)',    '3',  '3', 'Lenovo_Thinkcentre'):- lenovo_thinkcentre, !.                    
+computadora('HP',      'ProDesk 400',         'Escritorio', 'Multimedia', '10500',   '29"' ,  'AMD A8' ,              'AMD Radeon R7' ,           '8GB',  'windows 8.1', '500GB (HDD)',   '6',  '2', 'HP_Prodesk_400'):- hp_prodesk_400, !.
+/**
 computadora(acer, vx2631g, escritorio, multimedia, 10600, 4, 4, windows_7, 500gb, 4, 2).
 computadora(dell, optiplex_9020, escritorio, disenio, 17380, 8, 8, windows_8_1, 1tb, 2, 6).
 computadora(lenovo, m53p, escritorio, disenio, 12470, 8, 8, windows_7, 1tb, 2, 6).
 computadora(apple, imac, escritorio, disenio, 48000, 4, 8, OS_X, 2tb, 0, 4).
 computadora(ghia, ci7_4790, escritorio, gamer, 12200, 8, 8, windows_8_1, 2tb, 2, 8).
 computadora(hp, elite_one_800, escritorio, gamer, 24900, 8, 8, windows_8_1, 1tb, 4, 4).
-
+**/
 
 %Reglas que identifican a cada computadora (Se deben poner cosas que diferencíen a un modelo del resto).
 %Las que no llevan paréntesis son reglas de clasificación.
 
 lenovo_g40_30:- laptop,
-			cores2,
+			intel,
 			ram4,
 			pantallaP,
             muchoAlmacenamiento.
 
 
 ghia_qcn3540:- laptop,	
-			cores4,
+			intel,
 			ram4,
 			pantallaP,
             muchoAlmacenamiento.
 
 
 dell_inspiron_14:- laptop,
-			cores4,
+			intel,
 			ram4,
             muchoAlmacenamiento.
 
 
 hp_14_af16la:- laptop, 
-			cores4,
+			amd,
 			ram6,
             muchoAlmacenamiento.
 
 
 asus_f455la:- laptop,
-			cores4,
+			intel,
 			ram4,
 			pantallaP,
             verifica('deber tener 2 puertos USB 3.0'),
@@ -140,31 +141,32 @@ asus_f455la:- laptop,
 
 
 hp_elitebook:- laptop,
-			cores8,
+			intel,
 			ram16,
 			pantallaP,
             windows.
 
 
 toshiba_l55:- laptop,
-			cores4,
+			intel,
 			ram8,
 			pantallaP,
             verifica('deber ser uso disenio').
 
 
 lenovo_y50_70:- laptop,
-			cores8,
+			intel,
 			ram8,
 			pantallaP,
             gamer.
 
-dell_alienware_15_r2:- laptop,
-			ram8,
-			verifica('debe tener solo puertos USB3.0'),
-			gamer,
-			noPortable,
-			muyCara.
+dell_alienware_15_r2:-  laptop,
+						ram8,
+						intel,
+						verifica('debe tener solo puertos USB3.0'),
+						gamer,
+						noPortable,
+						muyCara.
 
 
 hp_envy14:- laptop,
@@ -184,32 +186,32 @@ acer_tmb115:- laptop,
 macbookpro:- laptop,
 			osx,
 			ram16,
-			cores8,
+			intel,
 			ssd,
 			pocoAlmacenamiento,
 			muyCara.
 			
- Dell_Inspiron_3046:- escritorio,
+ dell_inspiron_3046:- escritorio,
              windows,
              ram4,
-             cores2,
+             intel,
              muchoAlmacenamiento,
 			 verifica('debe tener solo puerto USB3.0').
              			 
 
-GHIA_Pentium_dual_g8040:- escritorio,
+ghia_pentium_dual:- escritorio,
               linux,
 			  verifica(' no debe tener puerto USB3.0'),
 			  ram4,
 			  economico.
 			
-Dell_Inspiron_2980:- escritorio,
+dell_inspiron_2980:- escritorio,
                windows,
 			   ram2.
 			   
                
 
-Lenovo_Thinkcentre:- escritorio,
+lenovo_thinkcentre:- escritorio,
                windows,
 			   ram4,
 			   muchoAlmacenamiento,
@@ -217,7 +219,7 @@ Lenovo_Thinkcentre:- escritorio,
 			   verifica('debe tener 3 puertos USB3.0').
 
 
-HP_Prodesk_400:- escritorio,
+hp_prodesk_400:- escritorio,
                windows,
 			   ram8,
 			   precioMedio,
@@ -248,9 +250,8 @@ ram6:-					verifica('debe tener al menos 6GB de RAM').
 ram8:-					verifica('debe tener al menos 8GB de RAM').
 ram16:-					verifica('debe tener al menos 16GB de RAM').
 precioMedio:-			verifica('debe costar entre $15,000 y $20,000').
-cores2:-				verifica('debe tener al menos 2 cores de CPU').
-cores4:-				verifica('debe tener al menos 4 cores de CPU').
-cores8:-				verifica('debe tener al menos 8 cores de CPU').
+intel:-				verifica('debe tener un procesador Intel').
+amd:-				verifica('debe tener un procesador AMD').
 ssd:-					verifica('debe tener SSD en lugar de disco duro').
 
 %Preguntas al usuario.
