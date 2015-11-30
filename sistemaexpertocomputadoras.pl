@@ -106,8 +106,7 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
 
 %%%%%%%%%%%%%%%%%%%%Escritorio
  dell_inspiron_3046:- 
- 			 monitorM,
-             windows,
+ 			 windows,
              ram4,
              muchoAlmacenamiento,
              monitorP,
@@ -116,8 +115,7 @@ computadora('HP', 		'Elite one 800', 		'Escritorio', 'Gamer', 	  	'24,900', '23"
              			 
 
 ghia_pentium_dual:- 
- 			 monitorG,
-              linux,
+ 			  linux,
 			  verifica(' no debe tener al menos un puerto USB3.0'),
 			  ram4,
 			  monitorG,
@@ -126,8 +124,7 @@ ghia_pentium_dual:-
 
 			
 dell_inspiron_2980:- 
- 			 monitorM,
-                windows,
+ 			    windows,
 				monitorM,
 				verifica('puede tener un procesador de gama baja'),
 				verifica('la usara principalmete para programas de oficina'),
@@ -135,8 +132,7 @@ dell_inspiron_2980:-
                
 
 lenovo_thinkcentre:-
- 			  monitorG,
-               windows,
+ 			   windows,
 			   ram4,
 			   muchoAlmacenamiento,
 			   precioMedio,
@@ -145,8 +141,7 @@ lenovo_thinkcentre:-
 
 
 hp_prodesk_400:- 
- 			  monitorG, 
-               windows,
+ 			   windows,
 			   ram8,
 			   precioMedio,
 			   monitorG,
